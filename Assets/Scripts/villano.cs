@@ -8,11 +8,20 @@ public class villano : MonoBehaviour
     public GameObject personaje;
     private float LastShoot;
     private int Health = 3;
+     private Rigidbody2D Rigidbody2D;
+    private GameObject vida;
+     
+
+     void Start()
+    {
+      Rigidbody2D = GetComponent<Rigidbody2D>(); 
+    }
     // Update is called once per frame
    private void Update()
     {
 
         if(personaje == null) return;
+
       Vector3 direction = personaje.transform.position - transform.position;
 if(direction.x >= 0.0f){ transform.localScale = new Vector3(1.0f,1.0f, 1.0f);}
     else{
@@ -35,20 +44,25 @@ if(direction.x >= 0.0f){ transform.localScale = new Vector3(1.0f,1.0f, 1.0f);}
     direction = Vector3.right;
    }else{
     direction = Vector3.left;
-   }
-
+   }  
+   
    GameObject balas = Instantiate(bala, transform.position + direction * 0.2f, Quaternion.identity);
    balas.GetComponent<disparo>().SetDirection(direction);
 }
 
+
+   
 public void Hit() {
     {
         Health = Health -1;
+        
         if(Health == 0){
+            
             Destroy(gameObject);
         }
     }
 }
+
 
 
     }

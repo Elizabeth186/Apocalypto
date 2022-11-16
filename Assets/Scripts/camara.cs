@@ -14,6 +14,7 @@ public class camara : MonoBehaviour
 if(personaje != null){
         Vector3 position = transform.position;
         position.x = personaje.transform.position.x;
+        position.y = personaje.transform.position.y;
         transform.position = position;
         
     }

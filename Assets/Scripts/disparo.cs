@@ -28,6 +28,7 @@ public class disparo : MonoBehaviour
 
     public void Destroybala()
     {
+        
         Destroy(gameObject);
     }
 

@@ -22,8 +22,8 @@ public class llave : MonoBehaviour
 }
 
     private void OnTriggerEnter2D(Collider2D other){
-        if(other.CompareTag("personaje") && cantidadEnemigosEliminados == cantidadEnemigos){
-          SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if(other.gameObject.tag == "personaje"){
+          SceneManager.LoadScene(3);
         }
     }
 }

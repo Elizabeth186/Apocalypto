@@ -12,7 +12,7 @@ public class personaje : MonoBehaviour
     private float Horizontal;
     private bool Grounded;
 private float tiempodedisparo;
-private int Health  = 5;
+private int Health  = 6;
    
     // Start is called before the first frame update
     void Start()

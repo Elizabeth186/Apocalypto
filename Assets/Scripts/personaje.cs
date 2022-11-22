@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class personaje : MonoBehaviour
 {    
@@ -13,6 +14,7 @@ public class personaje : MonoBehaviour
     private float Horizontal;
     private bool Grounded;
 private float tiempodedisparo;
+public TextMeshProUGUI VidaText;
 private int Health  = 6;
    
     // Start is called before the first frame update
@@ -20,6 +22,7 @@ private int Health  = 6;
     {
       Rigidbody2D = GetComponent<Rigidbody2D>(); 
       Animator = GetComponent<Animator>(); 
+      VidaText.text = "" + Health;
     }
 
     // Update is called once per frame

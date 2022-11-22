@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class personaje : MonoBehaviour
 {    
@@ -74,8 +75,10 @@ private void Shoot(){
 public void Hit() {
     {
         Health = Health -1;
-        if(Health == 0){
+        if(Health == 0 ){
             Destroy(gameObject);
+            SceneManager.LoadScene(1);
+            
         }
     }
 }

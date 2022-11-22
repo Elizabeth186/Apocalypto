@@ -34,11 +34,31 @@ public class disparo : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) {
          personaje persona =   collision.GetComponent<personaje>();
+         personaje1 persona1 =   collision.GetComponent<personaje1>();
+         personaje2 persona2 =   collision.GetComponent<personaje2>();
        villano vill = collision.GetComponent<villano>();
-   
+   //personaje nivel 1
    if( persona != null)
    {
     persona.Hit();
+   }
+   if(vill != null)
+    {
+        vill.Hit();
+    }  
+    // personaje nivel 2
+     if( persona1 != null)
+   {
+    persona1.Hit();
+   }
+   if(vill != null)
+    {
+        vill.Hit();
+    }  
+    // personaje nivel 3
+     if( persona2 != null)
+   {
+    persona2.Hit();
    }
    if(vill != null)
     {
